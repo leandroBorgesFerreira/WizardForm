@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="br.com.leandroferreira.wizardform.MainViewModel" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="br.com.leandroferreira.wizardform.MainActivity">
+
+        <br.com.leandroferreira.wizardform.views.WizardPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:itemBinding="@{viewModel.itemBinding}"
+            app:items="@{viewModel.pages}"
+            app:navigator="@{viewModel.navigator}"
+            app:stateHolder="@{viewModel.stateHolder}"
+            />
+
+    </LinearLayout>
+
+</layout>
