@@ -1,4 +1,4 @@
-package br.com.leandroferreira.wizardform.contract
+package br.com.leandroferreira.wizard_form.contract
 
 interface Navigator : PageChanger {
     override fun nextPage()

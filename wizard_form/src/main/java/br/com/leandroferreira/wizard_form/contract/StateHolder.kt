@@ -1,4 +1,4 @@
-package br.com.leandroferreira.wizardform.contract
+package br.com.leandroferreira.wizard_form.contract
 
 open class StateHolder<K>(var stateDto : K) {
 

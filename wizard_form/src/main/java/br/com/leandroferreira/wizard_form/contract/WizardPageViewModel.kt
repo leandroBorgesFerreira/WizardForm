@@ -1,4 +1,4 @@
-package br.com.leandroferreira.wizardform.contract
+package br.com.leandroferreira.wizard_form.contract
 
 abstract class WizardPageViewModel<K> {
     var navigator : Navigator? = null

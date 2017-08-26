@@ -1,4 +1,4 @@
-package br.com.leandroferreira.wizardform.views
+package br.com.leandroferreira.wizard_form.views
 
 import android.content.Context
 import android.support.v4.view.ViewPager

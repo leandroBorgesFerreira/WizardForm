@@ -1,13 +1,13 @@
 package br.com.leandroferreira.wizardform
 
 import android.databinding.ObservableArrayList
-import br.com.leandroferreira.wizardform.contract.Navigator
-import br.com.leandroferreira.wizardform.contract.StateHolder
+import br.com.leandroferreira.wizard_form.contract.Navigator
+import br.com.leandroferreira.wizard_form.contract.StateHolder
+import br.com.leandroferreira.wizard_form.contract.WizardPageViewModel
 import br.com.leandroferreira.wizardform.dto.User
 import br.com.leandroferreira.wizardform.pages.PageOneViewModel
 import br.com.leandroferreira.wizardform.pages.PageThreeViewModel
 import br.com.leandroferreira.wizardform.pages.PageTwoViewModel
-import br.com.leandroferreira.wizardform.contract.WizardPageViewModel
 import br.com.leandroferreira.wizardform.pages.PageFourViewModel
 import me.tatarka.bindingcollectionadapter2.OnItemBind
 
