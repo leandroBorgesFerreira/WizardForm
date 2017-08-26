@@ -1,4 +1,4 @@
-package br.com.leandroferreira.wizardform.binding;
+package br.com.leandroferreira.wizard_form.binding;
 
 import android.databinding.BindingAdapter;
 

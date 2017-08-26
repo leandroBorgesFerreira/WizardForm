@@ -3,7 +3,6 @@ package br.com.leandroferreira.wizardform.pages
 import android.databinding.ObservableField
 import br.com.leandroferreira.wizardform.contract.OnStateChangeListener
 import br.com.leandroferreira.wizardform.contract.UpdatableWizardPageViewModel
-import br.com.leandroferreira.wizardform.contract.WizardPageViewModel
 import br.com.leandroferreira.wizardform.dto.User
 
 class PageFourViewModel : UpdatableWizardPageViewModel<User>() {
