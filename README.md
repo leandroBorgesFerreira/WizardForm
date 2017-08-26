@@ -1,7 +1,9 @@
 
 # Wizard Form
 
-Library that helps to create wizard form with android databinding eliminating boiler plate code
+Library that helps to create wizard form with android databinding eliminating boiler plate code.
+
+![enter image description here](https://lh3.googleusercontent.com/-NrDNxO2TFXc/WaG52kAzVxI/AAAAAAAAAGI/5ARSuzL2DPsS0ZOF0iEl6-uQW_VHwDt1ACLcBGAs/s0/Aug-26-2017+15-11-12.gif "Aug-26-2017 15-11-12.gif")
 
 ## Contents
 
