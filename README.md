@@ -1,3 +1,4 @@
+
 # Wizard Form
 
 Library that helps to create wizard form with android databinding eliminating boiler plate code.
@@ -19,6 +20,21 @@ This library was built on top of [binding-collection-adapter](https://github.com
 
 ## How to use
 
+    <br.com.leandroferreira.wizard_form.views.NonSwipeableWizardPager
+          android:id="@+id/viewPager"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:itemBinding="@{viewModel.itemBinding}"
+          app:items="@{viewModel.pages}"
+          app:navigator="@{viewModel.navigator}"
+          app:stateHolder="@{viewModel.stateHolder}"
+          />
+
+Navigator must implement Navigator interface. This class is responsible to coordinate the navigation of the pages. 
+
+StateHolder is the class used to hold the state of the from. You need to insert the POJO that you want to track. 
+
+All the fragments ViewModel must implement WizardPageViewModel or UpdatableWizardPageViewModel.
 
 ## Bugs and Feedback
 
