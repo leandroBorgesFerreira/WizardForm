@@ -6,8 +6,8 @@ import java.util.List;
 
 import br.com.leandroferreira.wizardform.contract.Navigator;
 import br.com.leandroferreira.wizardform.contract.StateHolder;
+import br.com.leandroferreira.wizardform.contract.UpdatableWizardPageViewModel;
 import br.com.leandroferreira.wizardform.contract.WizardPageViewModel;
-import br.com.leandroferreira.wizardform.pages.PageFourViewModel;
 import br.com.leandroferreira.wizardform.views.WizardPager;
 import me.tatarka.bindingcollectionadapter2.BindingViewPagerAdapter;
 import me.tatarka.bindingcollectionadapter2.ItemBinding;
@@ -46,8 +46,11 @@ public class WizardBindingAdapter {
             wizardPageViewModel.setNavigator(navigator);
             wizardPageViewModel.setStateHolder(stateHolder);
 
-            if (wizardPageViewModel instanceof PageFourViewModel) {
-                ((PageFourViewModel) wizardPageViewModel).init();
+            if (wizardPageViewModel instanceof UpdatableWizardPageViewModel) {
+                if(stateHolder != null) {
+                    wizardPageViewModel.getStateHolder().subscribeForStateChange((
+                            (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
+                }
             }
         }
 

@@ -16,7 +16,7 @@
         android:orientation="vertical"
         tools:context="br.com.leandroferreira.wizardform.MainActivity">
 
-        <br.com.leandroferreira.wizardform.views.WizardPager
+        <br.com.leandroferreira.wizardform.views.NonSwipeableWizardPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -1,7 +1,6 @@
 package br.com.leandroferreira.wizardform
 
 import android.databinding.ObservableArrayList
-import br.com.leandroferreira.wizardform.contract.DefaultNavigator
 import br.com.leandroferreira.wizardform.contract.Navigator
 import br.com.leandroferreira.wizardform.contract.StateHolder
 import br.com.leandroferreira.wizardform.dto.User
