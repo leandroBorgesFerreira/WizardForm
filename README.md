@@ -10,7 +10,8 @@ This library was built on top of [binding-collection-adapter](https://github.com
 ## Contents
 
  - [Installation](#installation)
- - [How to use / Sample](#how-to-use)
+ - [Important classes](#important-classes)
+ - [Tutorial](#tutorial)
  - [Bugs and feedback](#bugs-and-feedback)
  - [Credits](#credits)
 
