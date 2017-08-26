@@ -1,6 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+version = '0.2.0'
+group = 'br.com.leandroferreira'
 
 android {
     compileSdkVersion 26
@@ -26,6 +31,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+
+        // Bug in the android sdk https://github.com/square/okio/issues/58
+        // remove this on android O (it will include the missing packages).
+        warning 'InvalidPackage'
+    }
 }
 
 dependencies {
@@ -39,6 +52,93 @@ dependencies {
     kapt "com.android.databinding:compiler:$android_plugin_version"
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0'
 }
+
+if (project.hasProperty("android")) { // Android libraries
+    task sourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.srcDirs
+    }
+
+    task javadoc(type: Javadoc) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    }
+} else { // Java libraries
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'WizardForm'
+            description 'Library to create wizard form with data binding'
+            url 'https://github.com/leandroBorgesFerreira/WizardForm'
+            inceptionYear '2017'
+
+            packaging 'aar'
+            groupId 'br.com.leandroferreira'
+            artifactId 'wizard-form'
+            version "0.2.0"
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection 'https://github.com/leandroBorgesFerreira/WizardForm.git'
+                url 'https://github.com/leandroBorgesFerreira/WizardForm'
+
+            }
+            developers {
+                developer {
+                    name 'Leandro Borges Ferreira'
+                }
+            }
+        }
+    }
+}
+
+// Configure gradle-bintray-plugin (for publishing releases)
+bintray {
+    configurations = ['archives']
+
+    publish = true
+
+    pkg {
+        repo = 'maven'
+        name = 'wizard-form'
+        userOrg = 'lehen01'
+        licenses = ['Apache-2.0']
+        labels = ['architecture', 'databinding']
+        websiteUrl = 'https://github.com/leandroBorgesFerreira/WizardForm'
+        issueTrackerUrl = 'https://github.com/leandroBorgesFerreira/WizardForm/issues'
+        vcsUrl = 'https://github.com/leandroBorgesFerreira/WizardForm.git'
+        publicDownloadNumbers = true
+    }
+
+}
+
+if (project.hasProperty('bintrayUser') && project.hasProperty('bintrayKey')) {
+    bintray.user = project.bintrayUser
+    bintray.key = project.bintrayKey
+}
+
 repositories {
     mavenCentral()
 }
