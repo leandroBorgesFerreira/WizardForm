@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/leandroBorgesFerreira/WizardForm.svg?branch=0.2.0)](https://travis-ci.org/leandroBorgesFerreira/WizardForm)
+
 # Wizard Form
 
 Library that helps to create wizard form with android databinding eliminating boiler plate code.
