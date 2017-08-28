@@ -20,7 +20,7 @@ This library was built on top of [binding-collection-adapter](https://github.com
 
 ## Installation
 
-    compile 'br.com.leandroferreira:wizard-form:0.2.0'
+    compile 'br.com.leandroferreira:wizard-form:[lastestVersion]'
 
 ## Important classes  
           
