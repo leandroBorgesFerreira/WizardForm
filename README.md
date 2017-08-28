@@ -1,3 +1,4 @@
+[ ![Download](https://api.bintray.com/packages/lehen01/maven/wizard_forms/images/download.svg) ](https://bintray.com/lehen01/maven/wizard_forms/_latestVersion)
 
 [![Build Status](https://travis-ci.org/leandroBorgesFerreira/WizardForm.svg?branch=0.2.0)](https://travis-ci.org/leandroBorgesFerreira/WizardForm)
 
