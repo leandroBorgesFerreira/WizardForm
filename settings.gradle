@@ -1,1 +1,1 @@
-include ':app', ':wizard_form'
+include ':app', ':wizard_forms'

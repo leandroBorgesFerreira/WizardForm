@@ -37,5 +37,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
-    implementation project(':wizard_form')
+//    implementation project(':wizard_forms')
+    implementation 'br.com.leandroferreira:wizard_forms:0.2.1'
+
 }

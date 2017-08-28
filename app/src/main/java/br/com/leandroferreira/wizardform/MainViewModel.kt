@@ -1,9 +1,9 @@
 package br.com.leandroferreira.wizardform
 
 import android.databinding.ObservableArrayList
-import br.com.leandroferreira.wizard_form.contract.Navigator
-import br.com.leandroferreira.wizard_form.contract.StateHolder
-import br.com.leandroferreira.wizard_form.contract.WizardPageViewModel
+import br.com.leandroferreira.wizard_forms.contract.Navigator
+import br.com.leandroferreira.wizard_forms.contract.StateHolder
+import br.com.leandroferreira.wizard_forms.contract.WizardPageViewModel
 import br.com.leandroferreira.wizardform.dto.User
 import br.com.leandroferreira.wizardform.pages.PageOneViewModel
 import br.com.leandroferreira.wizardform.pages.PageThreeViewModel

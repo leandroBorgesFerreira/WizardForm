@@ -3,7 +3,7 @@ package br.com.leandroferreira.wizardform
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import br.com.leandroferreira.wizard_form.contract.Navigator
+import br.com.leandroferreira.wizard_forms.contract.Navigator
 import br.com.leandroferreira.wizardform.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
