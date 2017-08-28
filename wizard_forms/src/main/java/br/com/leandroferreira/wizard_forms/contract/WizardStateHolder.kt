@@ -1,6 +1,6 @@
 package br.com.leandroferreira.wizard_forms.contract
 
-open class StateHolder<K>(var stateDto : K) {
+open class WizardStateHolder<K>(var stateDto : K) {
 
     private val subscriberList: MutableList<OnStateChangeListener<K>> = mutableListOf()
 

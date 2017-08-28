@@ -1,6 +1,6 @@
 package br.com.leandroferreira.wizard_forms.contract
 
-interface Navigator : PageChanger {
+interface WizardNavigator : PageChanger {
     override fun nextPage()
     override fun previousPage()
 

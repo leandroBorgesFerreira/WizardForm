@@ -3,11 +3,11 @@ package br.com.leandroferreira.wizardform
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import br.com.leandroferreira.wizard_forms.contract.Navigator
+import br.com.leandroferreira.wizard_forms.contract.WizardNavigator
 import br.com.leandroferreira.wizardform.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), Navigator{
+class MainActivity : AppCompatActivity(), WizardNavigator{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

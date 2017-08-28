@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WizardForm.iml" filepath="$PROJECT_DIR$/WizardForm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WizardForm.iml" filepath="$PROJECT_DIR$/WizardForm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/wizard_form/wizard_form.iml" filepath="$PROJECT_DIR$/wizard_form/wizard_form.iml" />
       <module fileurl="file://$PROJECT_DIR$/wizard_forms/wizard_forms.iml" filepath="$PROJECT_DIR$/wizard_forms/wizard_forms.iml" />

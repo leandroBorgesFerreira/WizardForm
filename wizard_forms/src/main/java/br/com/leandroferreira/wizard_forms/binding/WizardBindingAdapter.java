@@ -4,8 +4,8 @@ import android.databinding.BindingAdapter;
 
 import java.util.List;
 
-import br.com.leandroferreira.wizard_forms.contract.Navigator;
-import br.com.leandroferreira.wizard_forms.contract.StateHolder;
+import br.com.leandroferreira.wizard_forms.contract.WizardNavigator;
+import br.com.leandroferreira.wizard_forms.contract.WizardStateHolder;
 import br.com.leandroferreira.wizard_forms.contract.UpdatableWizardPageViewModel;
 import br.com.leandroferreira.wizard_forms.contract.WizardPageViewModel;
 import br.com.leandroferreira.wizard_forms.views.WizardPager;
@@ -22,8 +22,8 @@ public class WizardBindingAdapter {
                                                                         List<T> items,
                                                                         BindingViewPagerAdapter<T> adapter,
                                                                         BindingViewPagerAdapter.PageTitles<T> pageTitles,
-                                                                        Navigator navigator,
-                                                                        StateHolder<K> stateHolder) {
+                                                                        WizardNavigator wizardNavigator,
+                                                                        WizardStateHolder<K> wizardStateHolder) {
         if (itemBinding == null) {
             throw new IllegalArgumentException("onItemBind must not be null");
         }
@@ -43,11 +43,11 @@ public class WizardBindingAdapter {
         adapter.setPageTitles(pageTitles);
 
         for (WizardPageViewModel<K> wizardPageViewModel : items) {
-            wizardPageViewModel.setNavigator(navigator);
-            wizardPageViewModel.setStateHolder(stateHolder);
+            wizardPageViewModel.setNavigator(wizardNavigator);
+            wizardPageViewModel.setStateHolder(wizardStateHolder);
 
             if (wizardPageViewModel instanceof UpdatableWizardPageViewModel) {
-                if(stateHolder != null) {
+                if(wizardStateHolder != null) {
                     wizardPageViewModel.getStateHolder().subscribeForStateChange((
                             (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
                 }
