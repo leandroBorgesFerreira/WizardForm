@@ -6,7 +6,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url 'https://dl.bintray.com/lehen01/maven' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$android_plugin_version"
@@ -23,7 +22,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://dl.bintray.com/lehen01/maven' }
     }
 
     subprojects {
