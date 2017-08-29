@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-version = '0.3.2'
+version = '0.3.3'
 group = 'br.com.leandroferreira'
 
 android {
@@ -91,7 +91,7 @@ install {
             packaging 'aar'
             groupId 'br.com.leandroferreira'
             artifactId 'wizard_forms'
-            version "0.3.2"
+            version "0.3.3"
 
             licenses {
                 license {

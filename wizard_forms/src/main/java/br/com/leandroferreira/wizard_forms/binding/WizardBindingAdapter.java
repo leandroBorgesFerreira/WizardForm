@@ -43,13 +43,20 @@ public class WizardBindingAdapter {
         adapter.setPageTitles(pageTitles);
 
         for (WizardPageViewModel<K> wizardPageViewModel : items) {
-            wizardPageViewModel.setNavigator(wizardNavigator);
-            wizardPageViewModel.setStateHolder(wizardStateHolder);
+            if(wizardNavigator != null) {
+                wizardPageViewModel.setNavigator(wizardNavigator);
+            }
+
+            if (wizardStateHolder != null) {
+                wizardPageViewModel.setStateHolder(wizardStateHolder);
+            }
 
             if (wizardPageViewModel instanceof UpdatableWizardPageViewModel) {
                 if(wizardStateHolder != null) {
-                    wizardPageViewModel.getStateHolder().subscribeForStateChange((
-                            (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
+                    if(wizardPageViewModel.getStateHolder() != null) {
+                        wizardPageViewModel.getStateHolder().subscribeForStateChange((
+                                (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
+                    }
                 }
             }
         }
