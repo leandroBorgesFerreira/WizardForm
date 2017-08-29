@@ -52,11 +52,9 @@ public class WizardBindingAdapter {
             }
 
             if (wizardPageViewModel instanceof UpdatableWizardPageViewModel) {
-                if(wizardStateHolder != null) {
-                    if(wizardPageViewModel.getStateHolder() != null) {
-                        wizardPageViewModel.getStateHolder().subscribeForStateChange((
-                                (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
-                    }
+                if(wizardPageViewModel.getStateHolder() != null) {
+                    wizardPageViewModel.getStateHolder().subscribeForStateChange((
+                            (UpdatableWizardPageViewModel) wizardPageViewModel).getOnStateChangeListener());
                 }
             }
         }
