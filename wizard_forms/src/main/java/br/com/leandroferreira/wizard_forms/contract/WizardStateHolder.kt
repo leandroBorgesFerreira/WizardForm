@@ -1,6 +1,8 @@
 package br.com.leandroferreira.wizard_forms.contract
 
-open class WizardStateHolder<K>(var stateDto : K) {
+import java.io.Serializable
+
+open class WizardStateHolder<K>(var stateDto : K) : Serializable {
 
     private val subscriberList: MutableList<OnStateChangeListener<K>> = mutableListOf()
 
