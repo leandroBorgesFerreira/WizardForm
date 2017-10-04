@@ -7,11 +7,15 @@ addons:
     - lynx
 android:
   components:
-  - platform-tools
-  - tools
-  - build-tools-26.0.1
-  - android-26
-  - extra-android-m2repository
+    - platform-tools
+    - tools
+    - build-tools-26.0.2
+    - android-26
+    - extra-android-m2repository
+  licenses:
+    - android-sdk-preview-license-.+
+    - android-sdk-license-.+
+    - google-gdk-license-.+
 before_install: chmod +x gradle/buildWithTravis.sh
 script: gradle/buildWithTravis.sh
 env:
