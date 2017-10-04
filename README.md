@@ -6,7 +6,7 @@ Library that helps to create wizard form with android databinding eliminating bo
 
 This library was built on top of [binding-collection-adapter](https://github.com/evant/binding-collection-adapter)    
 
-![enter image description here](https://lh3.googleusercontent.com/-NrDNxO2TFXc/WaG52kAzVxI/AAAAAAAAAGI/5ARSuzL2DPsS0ZOF0iEl6-uQW_VHwDt1ACLcBGAs/s0/Aug-26-2017+15-11-12.gif "Aug-26-2017 15-11-12.gif")
+![enter image description here](https://lh3.googleusercontent.com/-fKuSDCNl03E/WdT-J80BtHI/AAAAAAAAMkM/GiyZvfpw8Ic3wfuxL7P59nieJI6V20DiACLcBGAs/s500/Oct-04-2017+12-27-10.gif "Oct-04-2017 12-27-10.gif")
 
 ## Contents
 
