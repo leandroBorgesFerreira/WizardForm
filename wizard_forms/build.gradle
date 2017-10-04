@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def bintrayVersion = '0.3.9'
+def bintrayVersion = '0.4.0'
 version = bintrayVersion
 group = 'br.com.leandroferreira'
 
