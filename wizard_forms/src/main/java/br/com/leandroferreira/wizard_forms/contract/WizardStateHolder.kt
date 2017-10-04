@@ -4,6 +4,7 @@ import java.io.Serializable
 
 open class WizardStateHolder<K>(var stateDto : K) : Serializable {
 
+    @Transient
     private val subscriberList: MutableList<OnStateChangeListener<K>> = mutableListOf()
 
     fun notifyStateChange() = subscriberList.forEach { listener -> listener.getState(stateDto) }
